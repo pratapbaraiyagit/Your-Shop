@@ -9,6 +9,7 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import YourLogo from "../assets/your_shop_logo.png"; // **Adjust the path to your logo image**
 
 const Footer = () => {
   return (
@@ -17,8 +18,13 @@ const Footer = () => {
         <Row>
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
-              <h4 className="brand-text">Your Shop</h4>
-              <p  >
+              <img
+                src={YourLogo}
+                alt="Your Shop Logo"
+                className="brand-text"
+                style={{ width: "120px", height: "auto" }} // Set width, let height adjust
+              />
+              <p>
                 Your ultimate destination for premium products and exceptional
                 shopping experience.
               </p>

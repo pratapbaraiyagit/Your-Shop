@@ -5,6 +5,7 @@ import { FiShoppingCart, FiUser, FiMenu, FiLogOut } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import "./Navbar.css";
+import YourLogo from "../assets/your_shop_logo.png"; // **Adjust the path to your logo image**
 
 const CustomNavbar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -33,7 +34,13 @@ const CustomNavbar = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand-logo">
-          <span className="brand-text">Your Shop</span>
+          {/* Replaced "Your Shop" with an img tag for the logo */}
+          <img
+            src={YourLogo}
+            alt="Your Shop Logo"
+            // className="brand-text"
+            style={{ width: "70px", height: "70px" }} // Set width, let height adjust
+          />
         </Navbar.Brand>
 
         <div className="d-flex align-items-center order-lg-2">
@@ -41,7 +48,7 @@ const CustomNavbar = () => {
             <div className="cart-icon-wrapper">
               <FiShoppingCart size={20} />
               {getTotalItems() > 0 && (
-                <Badge bg="primary" className="cart-badge">
+                <Badge className="cart-badge">
                   {getTotalItems()}
                 </Badge>
               )}
@@ -68,7 +75,7 @@ const CustomNavbar = () => {
               </Dropdown.Menu>
             </Dropdown>
           ) : (
-            <Link to="/auth" className="btn btn-primary btn-sm">
+            <Link to="/auth" className="btn btn-primary-gradient btn-sm">
               Login
             </Link>
           )}

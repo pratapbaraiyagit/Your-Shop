@@ -46,8 +46,7 @@ const Home = () => {
               <Col lg={6} data-aos="fade-right">
                 <div className="hero-content">
                   <h1 className="hero-title text-white">
-                    Discover Amazing
-                    <span className="text-gradient"> Products</span>
+                    Discover Amazing Products
                   </h1>
                   <p className="hero-description text-white">
                     Shop the latest trends and discover unique products from top brands.
@@ -124,6 +123,7 @@ const Home = () => {
                       src={product.image}
                       alt={product.name}
                       className="product-image"
+                    style={{ height: '248px' } }
                     />
                     <div className="product-overlay">
                       <Button

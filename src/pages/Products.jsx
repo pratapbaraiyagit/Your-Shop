@@ -100,7 +100,7 @@ const Products = () => {
         <Row className="mb-4">
           <Col lg={4} md={6} className="mb-3">
             <div className="search-box" data-aos="fade-right">
-              <FiSearch className="search-icon" />
+              {/* <FiSearch className="search-icon" /> */}
               <Form.Control
                 type="text"
                 placeholder="Search products..."
@@ -162,6 +162,7 @@ const Products = () => {
                     src={product.image}
                     alt={product.name}
                     className="product-image"
+                    style={{ height: '248px' } }
                   />
                   <div className="product-badges">
                     {!product.inStock && (

@@ -79,7 +79,7 @@ const About = () => {
             <Col lg={6} data-aos="fade-right">
               <div className="hero-content">
                 <h1 className="hero-title">
-                  About <span className="text-gradient">Your Shop</span>
+                  About our Shop
                 </h1>
                 <p className="hero-description">
                   We're more than just an e-commerce platform. We're your
